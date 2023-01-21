@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}Profile{% endblock %} {% block
+content %}
+<div class="container">
+  <div class="p-3 text-white">
+    <h1 class="text-center">Hello {{ user.first_name }}!</h1>
+  </div>
+</div>
+<div class="container py-5 h-100 border-bottom">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card shadow-2-strong" style="border-radius: 1rem">
+        <div class="card-body p-5 text-center">
+          <!-- Email -->
+          <div class="form-outline mb-3">
+            <label class="form-label text-dark">Email:</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="{{ user.email }}"
+              aria-label="Disabled email input"
+              disabled
+            />
+          </div>
+          <!-- Plan -->
+          <div class="form-outline mt-3">
+            <label class="form-label text-dark">Plan:</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="{{ user.plan }}"
+              aria-label="Disabled plan input"
+              disabled
+            />
+          </div>
+          <!-- Date of Birth -->
+          <div class="form-outline mt-3">
+            <label class="form-label text-dark">Date of Birth:</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="{{ user.birthday }}"
+              aria-label="Disabled birthday input"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
